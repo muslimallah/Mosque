@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masjid Crypto Donation | Support Our Mission</title>
+    <meta
+      name="description"
+      content="Support our mosque's programs and community services through secure crypto donations on BNB Smart Chain (BEP20)."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              emeraldDeep: "#064e3b",
+              goldAccent: "#f59e0b",
+              goldSoft: "#fef3c7",
+              cream: "#fefce8"
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(6, 78, 59, 0.12)"
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+
+  <body class="text-cream antialiased">
+    <style>
+      :root {
+        --font-en: "Plus Jakarta Sans", sans-serif;
+        --font-ar: "Noto Naskh Arabic", serif;
+      }
+
+      body {
+        font-family: var(--font-en);
+        background-image:
+          linear-gradient(135deg, rgba(6, 78, 59, 0.78), rgba(4, 32, 27, 0.7)),
+          url("https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      html[lang="ar"] body {
+        font-family: var(--font-ar);
+      }
+    </style>
+    <div class="min-h-screen bg-[radial-gradient(circle_at_18%_8%,rgba(245,158,11,0.18),transparent_34%),radial-gradient(circle_at_88%_90%,rgba(254,252,232,0.15),transparent_30%)]">
+      <header class="bg-cream/20 backdrop-blur-md border-b border-cream/30 sticky top-0 z-20">
+        <div class="mx-auto max-w-6xl px-4 py-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          <a href="#" class="flex items-center gap-3 text-cream font-semibold tracking-wide">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream/20 ring-1 ring-cream/50">
+              <svg viewBox="0 0 64 64" class="h-6 w-6 text-goldAccent" fill="currentColor" aria-hidden="true">
+                <path d="M31.6 10.2a19.7 19.7 0 1 0 14.8 32.7 15.8 15.8 0 1 1-14.8-32.7Z" />
+                <path d="m47 13.5 2.1 4.4 4.8.6-3.5 3.4.9 4.8-4.3-2.3-4.3 2.3.9-4.8-3.5-3.4 4.8-.6Z" />
+              </svg>
+            </span>
+            <span data-i18n="brand">Masjid Community Trust</span>
+          </a>
+          <div class="flex items-center gap-2 sm:gap-3">
+            <div class="inline-flex items-center rounded-full border border-cream/40 bg-cream/20 p-1 backdrop-blur-md">
+              <button
+                id="lang-en"
+                type="button"
+                class="rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-cream"
+              >
+                EN
+              </button>
+              <button
+                id="lang-ar"
+                type="button"
+                class="rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-cream/70"
+              >
+                AR
+              </button>
+            </div>
+            <a
+              href="#donate"
+              class="inline-flex items-center rounded-full bg-goldAccent px-4 py-2 text-sm font-semibold text-emeraldDeep transition hover:brightness-95"
+              data-i18n="donateNow"
+            >
+              Donate Now
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="mx-auto max-w-6xl px-4 pt-10 pb-12 sm:px-6 lg:px-8 lg:pt-16">
+          <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p class="inline-flex items-center rounded-full bg-cream/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-goldSoft ring-1 ring-cream/40 backdrop-blur-md" data-i18n="tagline">
+                Secure Digital Giving
+              </p>
+              <h1 class="mt-4 text-3xl font-extrabold leading-tight text-cream sm:text-4xl lg:text-5xl" data-i18n="heroTitle">
+                Support the House of Allah Through Trusted Crypto Donations
+              </h1>
+              <p class="mt-4 max-w-xl text-base leading-relaxed text-cream/90 sm:text-lg" data-i18n="heroText">
+                Your contribution helps sustain daily prayers, Qur'an education, youth development, and support services for families in need.
+                Give with confidence through our official BNB Smart Chain donation channels.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a
+                  href="#donate"
+                  class="inline-flex items-center rounded-full bg-goldAccent px-5 py-3 text-sm font-bold text-emeraldDeep transition hover:brightness-95"
+                  data-i18n="startDonation"
+                >
+                  Start Donation
+                </a>
+                <a
+                  href="#mission"
+                  class="inline-flex items-center rounded-full border border-cream/40 bg-cream/15 px-5 py-3 text-sm font-semibold text-cream backdrop-blur-md transition hover:bg-cream/20"
+                  data-i18n="ourMissionCta"
+                >
+                  Our Mission
+                </a>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="rounded-3xl border border-cream/40 bg-cream/20 p-6 shadow-soft backdrop-blur-md">
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-goldSoft" data-i18n="officialGateway">Official Donation Gateway</p>
+                <h3 class="mt-3 text-2xl font-bold text-cream" data-i18n="confidenceCardTitle">Built for Trust, Clarity, and Amanah</h3>
+                <p class="mt-3 text-sm leading-relaxed text-cream/90" data-i18n="confidenceCardText">
+                  Every wallet shown here is managed by the mosque administration and reviewed for accuracy before publication.
+                </p>
+                <div class="mt-5 space-y-2 text-sm text-cream/90">
+                  <p data-i18n="trustPoint1">Real-time, verifiable transfers on-chain</p>
+                  <p data-i18n="trustPoint2">No intermediaries between donor and mosque wallet</p>
+                  <p data-i18n="trustPoint3">Clear network guidance to reduce transfer mistakes</p>
+                </div>
+              </div>
+              <div class="absolute -bottom-3 -left-3 rounded-xl bg-goldSoft px-3 py-2 text-xs font-semibold text-emeraldDeep shadow" data-i18n="communityFocused">
+                100% Community Focused
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="mission" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
+          <div class="rounded-3xl border border-cream/40 bg-cream/20 p-6 shadow-soft backdrop-blur-md sm:p-8">
+            <h2 class="text-2xl font-bold text-cream sm:text-3xl" data-i18n="missionTitle">Our Mission</h2>
+            <p class="mt-4 leading-relaxed text-cream/90" data-i18n="missionText">
+              We are dedicated to preserving a welcoming spiritual home for worship, learning, and service.
+              Every donation strengthens our ability to maintain the mosque, fund classes for children and adults,
+              and provide compassionate aid to vulnerable neighbors. Your support is sadaqah jariyah that can
+              benefit generations.
+            </p>
+          </div>
+        </section>
+
+        <section id="trust" class="mx-auto max-w-6xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
+          <div class="rounded-3xl border border-cream/40 bg-cream/20 p-6 shadow-soft backdrop-blur-md sm:p-8">
+            <h2 class="text-2xl font-bold text-cream sm:text-3xl" data-i18n="trustTitle">Official Verification</h2>
+            <p class="mt-4 leading-relaxed text-cream/90" data-i18n="trustText">
+              This is the official and only crypto donation page for Noor Al-Huda Mosque. If you need to verify wallet details before sending,
+              contact our administration team directly.
+            </p>
+            <p class="mt-4 text-sm font-semibold text-goldSoft" data-i18n="trustContact">
+              Verification Contact: +1 (555) 123-7860 | Instagram: @nooralhuda.mosque
+            </p>
+          </div>
+        </section>
+
+        <section id="donate" class="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-20">
+          <div class="rounded-3xl border border-cream/40 bg-cream/25 p-6 shadow-soft backdrop-blur-md sm:p-8 lg:p-10">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <h2 class="text-2xl font-bold text-cream sm:text-3xl" data-i18n="donateNow">Donate Now</h2>
+              <span class="inline-flex items-center rounded-full bg-goldSoft px-3 py-1 text-xs font-bold uppercase tracking-wide text-emeraldDeep" data-i18n="fastTransparent">
+                Fast & Transparent
+              </span>
+            </div>
+
+            <div class="mt-6 rounded-xl border border-red-200 bg-red-50 p-4">
+              <p class="text-sm font-bold text-red-800" data-i18n="warningBadge">
+                Network: BNB Smart Chain (BEP20) only. Sending funds via other networks may result in permanent loss.
+              </p>
+            </div>
+
+            <div class="mt-8 grid gap-8 lg:grid-cols-[1.2fr,1fr]">
+              <div>
+                <label for="asset-select" class="block text-sm font-semibold text-cream" data-i18n="selectAsset">Select Asset</label>
+                <select
+                  id="asset-select"
+                  class="mt-2 w-full rounded-xl border border-cream/40 bg-cream/90 px-4 py-3 text-base font-medium text-emeraldDeep shadow-sm focus:border-goldAccent focus:outline-none focus:ring-2 focus:ring-goldAccent/30"
+                >
+                  <option value="BTC">Bitcoin (BTC)</option>
+                  <option value="ETH">Ethereum (ETH)</option>
+                  <option value="USDT">USDT</option>
+                </select>
+
+                <div class="mt-5 rounded-xl border border-cream/40 bg-emeraldDeep/40 p-4 backdrop-blur-md">
+                  <p class="text-xs font-semibold uppercase tracking-wider text-goldSoft" data-i18n="walletAddress">BEP20 Wallet Address</p>
+                  <p id="wallet-address" class="mt-2 break-all text-sm font-medium text-cream"></p>
+                  <div class="mt-4 flex items-center gap-3">
+                    <button
+                      id="copy-btn"
+                      type="button"
+                      class="inline-flex items-center rounded-lg bg-goldAccent px-4 py-2 text-sm font-semibold text-emeraldDeep transition hover:brightness-95"
+                      data-i18n="copyAddress"
+                    >
+                      Copy Address
+                    </button>
+                    <span id="copy-feedback" class="text-sm font-semibold text-goldSoft opacity-0 transition-opacity duration-300">
+                      Copied!
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-2xl border border-cream/40 bg-emeraldDeep/35 p-5 text-center backdrop-blur-md">
+                <p class="text-sm font-semibold uppercase tracking-wider text-goldSoft" data-i18n="scanDonate">Scan to Donate</p>
+                <div id="qr-container" class="mt-4 inline-flex min-h-[220px] min-w-[220px] items-center justify-center rounded-xl border border-dashed border-cream/40 bg-cream p-4"></div>
+                <p id="qr-caption" class="mt-4 text-xs text-cream/90"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const translations = {
+        en: {
+          brand: "Masjid Community Trust",
+          donateNow: "Donate Now",
+          tagline: "Secure Digital Giving",
+          heroTitle: "Support the House of Allah Through Trusted Crypto Donations",
+          heroText:
+            "Your contribution helps sustain daily prayers, Qur'an education, youth development, and support services for families in need. Give with confidence through our official BNB Smart Chain donation channels.",
+          startDonation: "Start Donation",
+          ourMissionCta: "Our Mission",
+          photoTitle: "Mosque Photo",
+          photoSubtitle: "Placeholder area for your masjid image",
+          communityFocused: "100% Community Focused",
+          officialGateway: "Official Donation Gateway",
+          confidenceCardTitle: "Built for Trust, Clarity, and Amanah",
+          confidenceCardText:
+            "Every wallet shown here is managed by the mosque administration and reviewed for accuracy before publication.",
+          trustPoint1: "Real-time, verifiable transfers on-chain",
+          trustPoint2: "No intermediaries between donor and mosque wallet",
+          trustPoint3: "Clear network guidance to reduce transfer mistakes",
+          missionTitle: "Our Mission",
+          missionText:
+            "We use crypto donations to ensure transparent and traceable giving, faster settlement, and lower transfer costs for supporters around the world. Funds received are dedicated to mosque maintenance, community education programs, and structured aid for families in need. This digital channel strengthens accountability while making global sadaqah easier and more reliable.",
+          trustTitle: "Official Verification",
+          trustText:
+            "This is the official and only crypto donation page for Noor Al-Huda Mosque. If you need to verify wallet details before sending, contact our administration team directly.",
+          trustContact: "Verification Contact: +1 (555) 123-7860 | Instagram: @nooralhuda.mosque",
+          fastTransparent: "Fast & Transparent",
+          warningBadge:
+            "Network: BNB Smart Chain (BEP20) only. Sending funds via other networks may result in permanent loss.",
+          selectAsset: "Select Asset",
+          walletAddress: "BEP20 Wallet Address",
+          copyAddress: "Copy Address",
+          copied: "Copied!",
+          copyFailed: "Copy failed",
+          scanDonate: "Scan to Donate",
+          qrOnNetwork: "on BNB Smart Chain (BEP20)",
+          assets: {
+            BTC: "Bitcoin (BTC)",
+            ETH: "Ethereum (ETH)",
+            USDT: "USDT"
+          }
+        },
+        ar: {
+          brand: "وقف مجتمع المسجد",
+          donateNow: "تبرع الآن",
+          tagline: "تبرع رقمي آمن",
+          heroTitle: "ادعم بيت الله عبر تبرعات العملات الرقمية الموثوقة",
+          heroText:
+            "يساعد تبرعك في دعم الصلوات اليومية وتعليم القرآن وتنمية الشباب وخدمات الأسر المحتاجة. تبرع بثقة عبر قنواتنا الرسمية على شبكة BNB Smart Chain.",
+          startDonation: "ابدأ التبرع",
+          ourMissionCta: "رسالتنا",
+          photoTitle: "صورة المسجد",
+          photoSubtitle: "مساحة بديلة لإضافة صورة المسجد",
+          communityFocused: "100% لخدمة المجتمع",
+          officialGateway: "بوابة التبرع الرسمية",
+          confidenceCardTitle: "مصممة للثقة والوضوح والأمانة",
+          confidenceCardText:
+            "كل محفظة معروضة هنا تتم إدارتها من إدارة المسجد ويتم مراجعتها للتأكد من دقتها قبل النشر.",
+          trustPoint1: "تحويلات فورية وقابلة للتحقق على البلوكتشين",
+          trustPoint2: "لا توجد جهة وسيطة بين المتبرع ومحفظة المسجد",
+          trustPoint3: "إرشادات شبكة واضحة لتقليل أخطاء التحويل",
+          missionTitle: "رسالتنا",
+          missionText:
+            "نستخدم التبرع بالعملات الرقمية لضمان شفافية التبرعات وإمكانية تتبعها، مع سرعة التحويل وانخفاض الرسوم للمتبرعين من مختلف الدول. وتُخصص الأموال المستلمة لصيانة المسجد، وبرامج التعليم المجتمعي، ومساعدة الأسر المحتاجة بشكل منظم. هذه القناة الرقمية تعزز المساءلة وتجعل الصدقة العالمية أسهل وأكثر موثوقية.",
+          trustTitle: "التوثيق الرسمي",
+          trustText:
+            "هذه هي الصفحة الرسمية والوحيدة للتبرع بالعملات الرقمية لمسجد نور الهدى. إذا رغبت في التحقق من عناوين المحافظ قبل التحويل، تواصل مباشرة مع إدارة المسجد.",
+          trustContact: "التواصل للتحقق: 7860-123 (555) 1+ | إنستغرام: @nooralhuda.mosque",
+          fastTransparent: "سريع وشفاف",
+          warningBadge:
+            "الشبكة: BNB Smart Chain (BEP20) فقط. إرسال الأموال عبر شبكات أخرى قد يؤدي إلى فقدان دائم.",
+          selectAsset: "اختر الأصل",
+          walletAddress: "عنوان المحفظة على BEP20",
+          copyAddress: "نسخ العنوان",
+          copied: "تم النسخ!",
+          copyFailed: "فشل النسخ",
+          scanDonate: "امسح للتبرع",
+          qrOnNetwork: "على شبكة BNB Smart Chain (BEP20)",
+          assets: {
+            BTC: "بيتكوين (BTC)",
+            ETH: "إيثيريوم (ETH)",
+            USDT: "تيثر (USDT)"
+          }
+        }
+      };
+
+      const donationAssets = {
+        BTC: {
+          address: "0xf55d1a3122871a7e7b4b3c706b5f41bb626280db"
+        },
+        ETH: {
+          address: "0xf55d1a3122871a7e7b4b3c706b5f41bb626280db"
+        },
+        USDT: {
+          address: "0xf55d1a3122871a7e7b4b3c706b5f41bb626280db"
+        }
+      };
+
+      const assetSelect = document.getElementById("asset-select");
+      const walletAddress = document.getElementById("wallet-address");
+      const qrContainer = document.getElementById("qr-container");
+      const qrCaption = document.getElementById("qr-caption");
+      const copyButton = document.getElementById("copy-btn");
+      const copyFeedback = document.getElementById("copy-feedback");
+      const langEnButton = document.getElementById("lang-en");
+      const langArButton = document.getElementById("lang-ar");
+      let currentLanguage = "en";
+      let qrCode = null;
+
+      function setLanguage(language) {
+        currentLanguage = language;
+        const dictionary = translations[currentLanguage];
+
+        document.documentElement.lang = currentLanguage;
+        document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
+
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          if (dictionary[key]) {
+            element.textContent = dictionary[key];
+          }
+        });
+
+        Array.from(assetSelect.options).forEach((option) => {
+          option.textContent = dictionary.assets[option.value];
+        });
+
+        const activeClasses = ["bg-goldAccent", "text-emeraldDeep"];
+        const inactiveClasses = ["text-cream/70"];
+
+        if (currentLanguage === "en") {
+          langEnButton.classList.add(...activeClasses);
+          langEnButton.classList.remove(...inactiveClasses);
+          langArButton.classList.remove(...activeClasses);
+          langArButton.classList.add(...inactiveClasses);
+        } else {
+          langArButton.classList.add(...activeClasses);
+          langArButton.classList.remove(...inactiveClasses);
+          langEnButton.classList.remove(...activeClasses);
+          langEnButton.classList.add(...inactiveClasses);
+        }
+
+        renderDonationDetails();
+      }
+
+      function renderDonationDetails() {
+        const selectedAsset = donationAssets[assetSelect.value];
+        const dictionary = translations[currentLanguage];
+        const assetLabel = dictionary.assets[assetSelect.value];
+
+        walletAddress.textContent = selectedAsset.address;
+        qrCaption.textContent = `${assetLabel} ${dictionary.qrOnNetwork}`;
+
+        qrContainer.innerHTML = "";
+        qrCode = new QRCode(qrContainer, {
+          text: selectedAsset.address,
+          width: 200,
+          height: 200,
+          colorDark: "#064e3b",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H
+        });
+      }
+
+      async function copyCurrentAddress() {
+        const selectedAsset = donationAssets[assetSelect.value];
+        const dictionary = translations[currentLanguage];
+        try {
+          await navigator.clipboard.writeText(selectedAsset.address);
+          copyFeedback.textContent = dictionary.copied;
+          copyFeedback.classList.remove("opacity-0");
+          setTimeout(() => {
+            copyFeedback.classList.add("opacity-0");
+          }, 1400);
+        } catch (error) {
+          copyFeedback.textContent = dictionary.copyFailed;
+          copyFeedback.classList.remove("opacity-0");
+          setTimeout(() => {
+            copyFeedback.textContent = dictionary.copied;
+            copyFeedback.classList.add("opacity-0");
+          }, 1600);
+        }
+      }
+
+      assetSelect.addEventListener("change", renderDonationDetails);
+      copyButton.addEventListener("click", copyCurrentAddress);
+      langEnButton.addEventListener("click", () => setLanguage("en"));
+      langArButton.addEventListener("click", () => setLanguage("ar"));
+
+      setLanguage("en");
+    </script>
+  </body>
+</html>
